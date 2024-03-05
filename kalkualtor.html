@@ -1,0 +1,115 @@
+<htmL>
+    <head>
+        <script>
+            function dis(val)
+            {
+                document.getElementById("result").value+=val
+            }
+            function solve()
+            {
+                let x = document.getElementById("result").value
+                let y = eval(x)
+                document.getElementById("result").value=y
+            }
+            function clr()
+            {
+                document.getElementById("result").value=""
+            }
+            function backspace() {
+                 var bsp = document.getElementById("result").value;
+                  document.getElementById("result").value=bsp.substring(0,bsp.length -1);
+             }
+            window.onload= function() { alert("Selamat Datang");}
+        </script>
+    </head>
+    <body bgcolor="green"></body>
+    <table align="center" border="5" width="330px">
+        <tr>
+            <td colspan="4" class="title"> KALKULATOR XII RPL FEBRIAN SARAGIH </td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="text" id="result" placeholder="0"></button></td>
+            <td><input class="ekor" type="button" value="<I" onclick="backspace()"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="dis('1')"/></td>
+            <td><input type="button" value="2" onclick="dis('2')"/></td>
+            <td><input type="button" value="3" onclick="dis('3')"/></td>
+            <td><input class="kode" type="button" value="+" onclick="dis('+')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/></td>
+            <td><input type="button" value="5" onclick="dis('5')"/></td>
+            <td><input type="button" value="6" onclick="dis('6')"/></td>
+            <td><input class="kode" type="button" value="-" onclick="dis('-')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/></td>
+            <td><input type="button" value="8" onclick="dis('8')"/></td>
+            <td><input type="button" value="9" onclick="dis('9')"/></td>
+            <td><input class="kode" type="button" value="/" onclick="dis('/')"/></td>
+        </tr>
+        <tr>
+            <td><input class="ekor" type="button" value="C" onclick="clr()"/></td>
+            <td><input type="button" value="0" onclick="dis('0')"/></td>
+            <td><input class="ekor" type="button" value="=" onclick="solve()"/></td>
+            <td><input class="kode" type="button" value="x" onclick="dis('*')"/></td>
+        </tr>
+    </table>
+    <style>
+        table{
+            border-radius: 2%;
+            box-shadow: 0px 6px 12px #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        td{
+            border-radius: 7%;
+        }
+        tr{
+            width: 60px;
+            height: 67px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 22px;
+            background-color: rgb(23,167,23);
+            color: white;
+        }
+        input[type="button"]
+        {
+            width: 100px;
+            height: 60px;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: rgb(23,167,23);
+            color: aliceblue;
+            border-radius: 7%;
+
+        }
+        .title{
+            margin-bottom: 2px ;
+            text-align: center;
+            height: 67px;
+            font-weight: bold;
+            font-size: 30;
+            border-radius: 7%;
+        }
+        input[type="text"]{
+            width: 100%;
+            height: 60px;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: white;
+            border-radius: 7%;
+        }
+        input[type="button"].kode
+        {
+            background-color: orange;
+        }
+        input[type="button"].ekor
+        {
+            background-color: red;
+        }
+    </style>
+</htmL>
